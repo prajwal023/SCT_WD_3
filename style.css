@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #1e1e2f;
+    color: white;
+}
+h1 {
+    margin-bottom: 20px;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid rgb(240, 236, 236); 
+    animation: typing 3s steps(15, end) forwards, blink 0.2s steps(2,start) 1.7s forwards;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 30%; }
+  }
+  
+  @keyframes blink {
+    50% { border-color: transparent; }
+    100%{ border-right: none;}
+
+  }
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    justify-content: center;
+    margin: auto;
+}
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.cell:hover {
+    background-color: #555;
+}
+.winner {
+    font-size: 24px;
+    margin-top: 20px;
+}
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #46929c;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+button:hover {
+    opacity: 0.8;
+}
